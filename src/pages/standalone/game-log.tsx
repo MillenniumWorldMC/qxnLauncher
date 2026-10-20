@@ -117,7 +117,7 @@ const GameLogPage: React.FC = () => {
     },
     DEBUG: {
       colorScheme: "blue",
-      textColor: useColorModeValue("blue.600", "blue.300"),
+      textColor: useColorModeValue("qxn.600", "qxn.300"),
     },
   };
 

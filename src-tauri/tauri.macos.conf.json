@@ -1,5 +1,5 @@
 {
-  "identifier": "SJMCL",
+  "identifier": "qxnlauncher",
   "bundle": {
     "resources": {
       "infoplist": ""
@@ -19,7 +19,7 @@
     "windows": [
       {
         "label": "main",
-        "title": "SJMC Launcher",
+        "title": "qxnLauncher",
         "url": "/",
         "width": 800,
         "height": 550,

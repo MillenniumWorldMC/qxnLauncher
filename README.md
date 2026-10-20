@@ -1,14 +1,12 @@
-# SJMCL-Fork
+# qxnLauncher
 
-基于 [SJMCL](https://github.com/UNIkeEN/SJMCL)（SJMC Launcher）的定制分支，后续将进行品牌化改名与功能定制。
+基于 [SJMCL](https://github.com/UNIkeEN/SJMCL)（SJMC Launcher）的定制分支，正在进行品牌化与功能定制。
 
 > 本项目不是官方 Minecraft 服务，未获 Mojang 或 Microsoft 批准或关联。
 
 ## 简介
 
-SJMCL-Fork 继承上游 SJMCL 的全部能力，并在此基础上进行定制。当前代码与上游 `main` 保持一致，仅清理了上游文档。
-
-主要特性：
+qxnLauncher 继承上游 SJMCL 的全部能力，并在此基础上做品牌化与定制。主要特性：
 
 - **跨平台**：支持 Windows 10/11、macOS 10.15+ 与 Linux（webkit2gtk 4.1）
 - **实例管理**：多游戏目录、多实例，存档 / 模组 / 资源包 / 光影 / 截图 / 世界集中管理
@@ -16,6 +14,14 @@ SJMCL-Fork 继承上游 SJMCL 的全部能力，并在此基础上进行定制�
 - **多账户**：微软登录与第三方认证服务器，兼容 Yggdrasil Connect 的 OAuth 流程
 - **扩展系统与 MCP**：支持通过 deeplink、MCP 与外部网页、应用及 Agent 协作
 - **国际化**：内置多语言界面
+
+## 与上游的差异
+
+- 产品名称、应用标识与窗口标题改为 qxnLauncher
+- 默认主题色使用 qxnLauncher 色板（`#00BFFF` / `#87CEFA`）
+- 深链接协议改为 `qxnlauncher://`
+- 启动器更新源指向本仓库的 GitHub Releases
+- 统计上报使用带 `QXN-` 前缀的版本号
 
 ## 技术栈
 

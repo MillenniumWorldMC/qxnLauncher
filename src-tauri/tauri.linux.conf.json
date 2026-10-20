@@ -1,10 +1,10 @@
 {
-  "identifier": "SJMCL",
+  "identifier": "qxnlauncher",
   "app": {
     "windows": [
       {
         "label": "main",
-        "title": "SJMC Launcher",
+        "title": "qxnLauncher",
         "url": "/",
         "width": 800,
         "height": 550,

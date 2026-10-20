@@ -1,10 +1,10 @@
 [package]
-name = "SJMCL"
+name = "qxnlauncher"
 version.workspace = true
-description = "A Minecraft launcher from SJMC"
-authors = ["SJMCL Team"]
+description = "qxnLauncher, a Minecraft launcher based on SJMCL"
+authors = ["qxnLauncher contributors"]
 license = "GNU General Public License v3.0 (with additional terms)"
-repository = "https://github.com/UNIkeEN/SJMCL"
+repository = "https://github.com/MillenniumWorldMC/SJMCL-Fork"
 edition.workspace = true
 rust-version.workspace = true
 

@@ -273,7 +273,7 @@ structstruck::strike! {
     pub last_run_exited_normally: bool,
     pub appearance: struct AppearanceConfig {
       pub theme: struct {
-        #[default = "blue"]
+        #[default = "qxn"]
         pub primary_color: String,
         #[default = "light"]
         pub color_mode: String,

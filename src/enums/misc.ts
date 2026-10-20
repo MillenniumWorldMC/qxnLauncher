@@ -7,6 +7,7 @@ export enum BuildType {
 }
 
 export const ChakraColorEnums = [
+  "qxn",
   "red",
   "orange",
   "yellow",

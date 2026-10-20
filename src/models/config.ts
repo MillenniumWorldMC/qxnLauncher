@@ -289,7 +289,7 @@ export const defaultConfig: LauncherConfig = {
   lastRunExitedNormally: true,
   appearance: {
     theme: {
-      primaryColor: "blue",
+      primaryColor: "qxn",
       colorMode: "light",
       useLiquidGlassDesign: false,
       headNavStyle: "adaptive",

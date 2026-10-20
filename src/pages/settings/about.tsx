@@ -230,14 +230,14 @@ const AboutSettingsPage = () => {
           ),
           children: (
             <CommonIconButton
-              label="https://github.com/UNIkeEN/SJMCL?tab=readme-ov-file#copyright"
+              label="https://github.com/MillenniumWorldMC/SJMCL-Fork/blob/main/LICENSE"
               icon="external"
               withTooltip
               tooltipPlacement="bottom-end"
               size="xs"
               onClick={() => {
                 openUrl(
-                  "https://github.com/UNIkeEN/SJMCL?tab=readme-ov-file#copyright"
+                  "https://github.com/MillenniumWorldMC/SJMCL-Fork/blob/main/LICENSE"
                 );
               }}
             />

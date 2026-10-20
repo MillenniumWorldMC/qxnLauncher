@@ -3,11 +3,13 @@ import styles from "@/styles/logo-title.module.css";
 
 interface LogoTitleProps extends BoxProps {}
 
+const APP_NAME = "qxnLauncher";
+
 export const TitleShort: React.FC<LogoTitleProps> = (props) => {
   return (
     <Heading size="md" className={styles.title} {...props}>
-      <Highlight query="L" styles={{ color: "blue.600", userSelect: "none" }}>
-        SJMCL
+      <Highlight query="qxn" styles={{ color: "qxn.500", userSelect: "none" }}>
+        {APP_NAME}
       </Highlight>
     </Heading>
   );
@@ -16,8 +18,8 @@ export const TitleShort: React.FC<LogoTitleProps> = (props) => {
 export const TitleFull: React.FC<LogoTitleProps> = (props) => {
   return (
     <Heading size="md" className={styles.title} {...props}>
-      <Highlight query="L" styles={{ color: "blue.600", userSelect: "none" }}>
-        SJMC Launcher
+      <Highlight query="qxn" styles={{ color: "qxn.500", userSelect: "none" }}>
+        {APP_NAME}
       </Highlight>
     </Heading>
   );

@@ -16,7 +16,7 @@ export const CompactButtonGroup: React.FC<CompactButtonGroupProps> = ({
   children,
   size = "sm",
   variant = "solid",
-  colorScheme = "blue",
+  colorScheme = "qxn",
   borderRadius = "md",
 }) => {
   const validChildren = React.Children.toArray(children).filter((child) =>

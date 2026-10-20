@@ -20,7 +20,7 @@ const RETRY_INTERVAL_MS: u64 = 250;
 const EXPECTED_SERVER_NAME: &str = "sjmcl-mcp";
 const MCP_SERVER_HOST: &str = "127.0.0.1";
 const MCP_SERVER_PATH: &str = "/mcp";
-const RUN_SJMCL_DEEPLINK: &str = "sjmcl://run-silently";
+const RUN_QXNLAUNCHER_DEEPLINK: &str = "qxnlauncher://run-silently";
 const ENABLE_MCP_HINT: &str = "Please enable Launcher MCP Server in SJMCL - Intelligence to use the CLI.\nIf your MCP server uses a port other than the default 18970, run the CLI with `-p <port>`.";
 
 #[derive(Clone)]
@@ -165,7 +165,7 @@ async fn connect_launcher(options: &CliOptions) -> Result<LauncherClient, String
   match try_connect(options.port).await {
     Ok(client) => Ok(client),
     Err(initial_err) => {
-      run_sjmcl_deeplink()?;
+      run_qxnlauncher_deeplink()?;
 
       let deadline = Instant::now() + std::time::Duration::from_millis(DEFAULT_CONNECT_TIMEOUT_MS);
       let mut last_error = initial_err;
@@ -214,8 +214,8 @@ fn print_help(tools: Option<&[Tool]>, hint: Option<&str>) {
   println!("SJMCL CLI {}", env!("CARGO_PKG_VERSION"));
   println!();
   println!("Usage:");
-  println!("  sjmcl-cli -h | --help");
-  println!("  sjmcl-cli [-p | --port <port>] <tool> [json-object]");
+  println!("  qxnlauncher-cli -h | --help");
+  println!("  qxnlauncher-cli [-p | --port <port>] <tool> [json-object]");
 
   if let Some(hint) = hint {
     println!();
@@ -322,37 +322,37 @@ fn parse_tool_arguments(args: &[String]) -> Result<Map<String, Value>, String> {
     .ok_or_else(|| "tool arguments must be a JSON object".to_string())
 }
 
-fn run_sjmcl_deeplink() -> Result<(), String> {
+fn run_qxnlauncher_deeplink() -> Result<(), String> {
   #[cfg(target_os = "macos")]
   let mut command = {
     let mut command = Command::new("open");
-    command.arg(RUN_SJMCL_DEEPLINK);
+    command.arg(RUN_QXNLAUNCHER_DEEPLINK);
     command
   };
 
   #[cfg(target_os = "linux")]
   let mut command = {
     let mut command = Command::new("xdg-open");
-    command.arg(RUN_SJMCL_DEEPLINK);
+    command.arg(RUN_QXNLAUNCHER_DEEPLINK);
     command
   };
 
   #[cfg(target_os = "windows")]
   let mut command = {
     let mut command = Command::new("cmd");
-    command.args(["/C", "start", "", RUN_SJMCL_DEEPLINK]);
+    command.args(["/C", "start", "", RUN_QXNLAUNCHER_DEEPLINK]);
     command
   };
 
   command
     .status()
-    .map_err(|err| format!("failed to open deeplink `{RUN_SJMCL_DEEPLINK}`: {err}"))
+    .map_err(|err| format!("failed to open deeplink `{RUN_QXNLAUNCHER_DEEPLINK}`: {err}"))
     .and_then(|status| {
       if status.success() {
         Ok(())
       } else {
         Err(format!(
-          "deeplink launcher exited with status {} for `{RUN_SJMCL_DEEPLINK}`",
+          "deeplink launcher exited with status {} for `{RUN_QXNLAUNCHER_DEEPLINK}`",
           status
         ))
       }

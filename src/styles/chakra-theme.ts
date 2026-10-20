@@ -53,6 +53,22 @@ const customGraySolidButtonTheme = {
 const chakraExtendTheme = extendTheme({
   initialColorMode: "dark",
   useSystemColorMode: false,
+  colors: {
+    // qxnLauncher brand palette: #00BFFF (deep sky blue) as the primary tone,
+    // #87CEFA (light sky blue) as the lighter companion tone.
+    qxn: {
+      50: "#E9F9FF",
+      100: "#D2F3FF",
+      200: "#A9E9FF",
+      300: "#87CEFA",
+      400: "#4BD3FF",
+      500: "#00BFFF",
+      600: "#00A6DC",
+      700: "#0087B4",
+      800: "#00698C",
+      900: "#004E68",
+    },
+  },
   components: {
     Alert: {
       baseStyle: {
